@@ -5,6 +5,14 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+@keyframes color_change{
+    from{
+        color: rgb(92, 159, 182);
+    }
+    to{
+        color: white;
+    }
+}
 h1{
     position: absolute;
     margin-top: 5%;
@@ -14,16 +22,10 @@ h1{
     text-decoration: none;
     border: solid rgb(92, 159, 182);
     padding: 5px;
+    animation: color_change 1s linear infinite alternate;
 }
 h1:hover{
-    transform: scale(1.2);
-    color: rgb(92, 159, 182);
-    border: solid white;
-    transition: 0.5s;
     cursor: default;
-}
-h1:not(:hover){
-    transition: 0.5s;
 }
 .websites a{
     border-radius: 10px;
@@ -103,6 +105,57 @@ h1:not(:hover){
     text-align: center;
     margin-top: 12%;
     margin-left: 24%;
+}
+@keyframes new_rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.box{
+    position: absolute;
+    margin-top: 12%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-top: 5px blue;
+    background-color: rgb(92, 159, 182);
+    animation: new_rotate 0.7s linear infinite;
+}
+@keyframes slide{
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 0px;
+        left: 315px;
+    }
+    50%{
+        top: 60px;
+        left: 315px;
+    }
+    75%{
+        top: 60px;
+        left: 0px;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+}
+.circle{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 40%;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(92, 159, 182);
+    /*border-radius: 50%;*/
+    animation: slide 5s linear infinite;
 }
 /*.google img{
     border-radius: 10px;
